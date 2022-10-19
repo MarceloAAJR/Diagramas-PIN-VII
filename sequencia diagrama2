@@ -1,0 +1,41 @@
+@startuml
+autonumber
+actor Profissionais as prof
+prof -> ConsultasAgendadas: visualizar consultas agendadas
+activate ConsultasAgendadas
+ConsultasAgendadas --> prof:
+deactivate ConsultasAgendadas
+
+prof -> SelecionarConsultaAgendada: selecionar consulta
+activate SelecionarConsultaAgendada
+SelecionarConsultaAgendada --> prof
+deactivate SelecionarConsultaAgendada
+
+prof -> InformacaoPaciente: visualiza informacoes paciente
+activate InformacaoPaciente
+InformacaoPaciente --> prof:
+deactivate InformacaoPaciente
+
+prof -> InformacaoConsulta: visualizar informacoes consulta
+activate InformacaoConsulta
+InformacaoConsulta --> prof:
+deactivate InformacaoConsulta
+
+prof -> Pagamento: confirmar pegamento consulta
+activate Pagamento
+Pagamento --> prof:
+deactivate Pagamento
+
+prof -> ParticiparConsulta: realizar consulta
+activate ParticiparConsulta
+ParticiparConsulta --> prof:
+deactivate ParticiparConsulta
+
+
+prof -> AvaliacaoConsulta: visualiza avaliacao da consulta
+activate AvaliacaoConsulta
+AvaliacaoConsulta --> prof:
+deactivate AvaliacaoConsulta
+
+
+@enduml

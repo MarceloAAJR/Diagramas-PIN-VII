@@ -1,0 +1,35 @@
+@startuml
+autonumber
+actor Paciente as p
+p -> Especialidades: pesquisa especialidades
+activate Especialidades
+Especialidades --> p: 
+deactivate Especialidades
+
+p -> Medico: escolhe Medico
+activate Medico
+Medico --> p:
+deactivate Medico
+
+p -> Consulta: agenda consulta
+activate Consulta
+Consulta --> p:
+deactivate Consulta
+
+p -> Pagamento: pagar Consulta
+activate Pagamento
+Pagamento --> p:
+deactivate Pagamento
+
+p -> ParticiparConsulta: realizar consulta
+activate ParticiparConsulta
+ParticiparConsulta --> p:
+deactivate ParticiparConsulta
+
+p -> Avaliar: avaliar consulta
+activate Avaliar
+Avaliar --> p:
+deactivate Avaliar
+
+
+@enduml
